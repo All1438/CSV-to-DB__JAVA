@@ -7,14 +7,14 @@
     <session-factory> 
         <!-- Configuration de la base de données -->
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:205/</property>
+        <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:205/CSV_DB</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">password</property>
 
         <!-- Pool -->
         <property name="hibernate.connection.pool_size">5</property>
 
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> 
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property> 
         <!-- Changé MySQLDialect si on veut changé la base de données -->
 
         <property name="hibernate.current_session_context_class">thread</property>
@@ -26,6 +26,8 @@
         <property name="hibernate.format_sql">true</property>
 
         <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <mapping class="csvtodb.entity.BaseSourcing" />
 
 
     </session-factory>
